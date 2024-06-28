@@ -80,6 +80,6 @@ jobs:
       run: |
         ls -lR dist
         cd dist/artifacts
-        gh release upload $VERSION webhook-linux-* sha256sum-*.txt rancher-webhook*.tgz
+        gh release create --repo MbolotSuse/webhook $VERSION webhook-linux-* sha256sum-*.txt rancher-webhook*.tgz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
